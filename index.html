@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <title>Greencharts</title>
+  <link rel="stylesheet" href="style.css?v=17">
+</head>
+<body>
+  <main class="app">
+    <section class="buttons" aria-label="Покерные ситуации">
+      <div id="rfiButtons" class="button-grid"></div>
+      <div id="vsButtons" class="button-grid"></div>
+      <div id="threeBetButtons" class="button-grid"></div>
+    </section>
+    <section id="chartLayout" class="chart-layout" aria-label="Диапазон выбранной ситуации">
+      <div id="matrixWrap" class="matrix-wrap">
+        <div id="handMatrix" class="hand-matrix" role="grid" aria-label="Матрица стартовых рук"></div>
+      </div>
+      <aside class="side-panel" aria-live="polite">
+        <div id="selectedTitle" class="selected-title">UTG VS SB 3BET</div>
+        <div class="legend">
+          <div class="legend-item"><span class="swatch raise"></span><span>Raise</span></div>
+          <div class="legend-item"><span class="swatch call"></span><span>Call</span></div>
+          <div class="legend-item"><span class="swatch fold"></span><span>Fold</span></div>
+        </div>
+        <section class="banter-area" aria-label="Случайная покерная фраза">
+          <button id="humorToggle" class="humor-toggle" type="button" aria-pressed="true">ВКЛ</button>
+          <div id="humorText" class="humor-text" aria-live="polite"></div>
+        </section>
+      </aside>
+    </section>
+  </main>
+  <script src="charts.js?v=17"></script>
+  <script src="phrases.js?v=17"></script>
+  <script src="app.js?v=17"></script>
+</body>
+</html>
